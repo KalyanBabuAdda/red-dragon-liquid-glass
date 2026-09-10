@@ -4463,3 +4463,123 @@ main,
 .site-wrapper {
     background-color: transparent;
 }
+/* =========================================
+   HERO PRODUCT SIZE + ALIGNMENT RESTORE
+   Matches the original larger hero layout
+========================================= */
+
+/* Main product stage */
+.hero-product-area {
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+/* Hero shirt wrapper */
+.hero-product {
+    width: min(560px, 88vw) !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 5;
+}
+
+/* Actual T-shirt image */
+.hero-product img {
+    width: 100% !important;
+    max-width: 560px !important;
+    height: auto !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    display: block;
+    margin: 0 auto;
+}
+
+/* Keep rotation controls centered below shirt */
+.rotation-controls {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+
+    bottom: 28px !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Drag text centered */
+.drag-text,
+.drag-hint,
+.hero-drag-hint {
+    text-align: center;
+    width: 100%;
+}
+
+/* Product selector centered */
+.hero-switcher {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+
+    width: min(620px, 92vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero-product-area {
+        min-height: 830px !important;
+        padding: 10px 10px 150px !important;
+    }
+
+    .hero-product {
+        width: 97vw !important;
+        max-width: 610px !important;
+    }
+
+    .hero-product img {
+        width: 100% !important;
+        max-width: 640px !important;
+    }
+
+    .rotation-controls {
+        bottom: 105px !important;
+    }
+
+    .hero-switcher {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        width: calc(100% - 28px) !important;
+        margin: 22px auto 0 !important;
+
+        padding: 16px !important;
+
+        justify-content: center !important;
+    }
+}

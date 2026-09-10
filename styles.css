@@ -4463,123 +4463,759 @@ main,
 .site-wrapper {
     background-color: transparent;
 }
-/* =========================================
-   HERO PRODUCT SIZE + ALIGNMENT RESTORE
-   Matches the original larger hero layout
-========================================= */
 
-/* Main product stage */
-.hero-product-area {
-    min-height: 760px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 20px;
+/* =========================================================
+   RED DRAGON — FINAL PRODUCT SIZE & ALIGNMENT FIX
+   HERO + COLLECTION
+   Designed for Liquid Glass Design A
+========================================================= */
+
+
+/* =========================================================
+   HERO PRODUCT — DESKTOP
+========================================================= */
+
+.design-liquid-glass .hero-product-area {
+    height: 700px !important;
+    min-height: 700px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    position: relative !important;
+
+    padding: 0 !important;
+
+    overflow: visible !important;
 }
 
-/* Hero shirt wrapper */
-.hero-product {
-    width: min(560px, 88vw) !important;
-    max-width: 560px !important;
+
+.design-liquid-glass .hero-product {
+    width: min(600px, 92%) !important;
+    max-width: 600px !important;
+
+    max-height: none !important;
+
     margin: 0 auto !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    position: relative;
-    z-index: 5;
+    position: relative !important;
+
+    z-index: 20 !important;
+
+    overflow: visible !important;
 }
 
-/* Actual T-shirt image */
-.hero-product img {
+
+.design-liquid-glass .hero-product img,
+.design-liquid-glass #hero-image {
     width: 100% !important;
-    max-width: 560px !important;
+    max-width: 600px !important;
+
     height: auto !important;
+    max-height: 640px !important;
 
     object-fit: contain !important;
     object-position: center center !important;
 
-    display: block;
-    margin: 0 auto;
+    display: block !important;
+
+    margin: 0 auto !important;
+
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+
+    filter:
+        drop-shadow(
+            0 38px 45px
+            rgba(0, 0, 0, 0.78)
+        );
 }
 
-/* Keep rotation controls centered below shirt */
-.rotation-controls {
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
 
-    bottom: 28px !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+/* =========================================================
+   HERO — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .design-liquid-glass .hero-product-area {
+        height: 650px !important;
+        min-height: 650px !important;
+
+        margin-top: 25px !important;
+    }
+
+
+    .design-liquid-glass .hero-product {
+        width: min(560px, 94%) !important;
+        max-width: 560px !important;
+
+        max-height: none !important;
+    }
+
+
+    .design-liquid-glass .hero-product img,
+    .design-liquid-glass #hero-image {
+        width: 100% !important;
+        max-width: 560px !important;
+
+        height: auto !important;
+        max-height: 600px !important;
+    }
+
 }
 
-/* Drag text centered */
-.drag-text,
-.drag-hint,
-.hero-drag-hint {
-    text-align: center;
-    width: 100%;
-}
 
-/* Product selector centered */
-.hero-switcher {
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
 
-    width: min(620px, 92vw);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
+/* =========================================================
+   HERO — MOBILE
+   LARGE LIKE THE ORIGINAL DESIGN
+========================================================= */
 
 @media (max-width: 700px) {
 
-    .hero-product-area {
-        min-height: 830px !important;
-        padding: 10px 10px 150px !important;
+    .design-liquid-glass .hero-product-area {
+        height: 620px !important;
+        min-height: 620px !important;
+
+        margin-top: 10px !important;
+
+        padding:
+            0 0 90px
+            !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        overflow: visible !important;
     }
 
-    .hero-product {
-        width: 97vw !important;
-        max-width: 610px !important;
+
+    .design-liquid-glass .hero-product {
+        width: 96vw !important;
+        max-width: 520px !important;
+
+        max-height: none !important;
+
+        margin:
+            0 auto
+            !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        overflow: visible !important;
     }
 
-    .hero-product img {
+
+    .design-liquid-glass .hero-product img,
+    .design-liquid-glass #hero-image {
         width: 100% !important;
-        max-width: 640px !important;
+        max-width: 520px !important;
+
+        height: auto !important;
+        max-height: 560px !important;
+
+        object-fit: contain !important;
+        object-position: center !important;
+
+        margin:
+            0 auto
+            !important;
     }
 
-    .rotation-controls {
-        bottom: 105px !important;
-    }
 
-    .hero-switcher {
-        position: relative !important;
+    /* FRONT / BACK controls */
 
-        left: auto !important;
+    .design-liquid-glass .rotation-controls {
+        bottom: 55px !important;
+
+        left: 50% !important;
         right: auto !important;
-        bottom: auto !important;
 
-        transform: none !important;
+        transform:
+            translateX(-50%)
+            !important;
 
-        width: calc(100% - 28px) !important;
-        margin: 22px auto 0 !important;
+        display: flex !important;
+        justify-content: center !important;
 
-        padding: 16px !important;
+        z-index: 500 !important;
+    }
+
+
+    .design-liquid-glass .drag-text {
+        bottom: 20px !important;
+
+        left: 50% !important;
+
+        transform:
+            translateX(-50%)
+            !important;
+
+        width: 100% !important;
+
+        text-align: center !important;
+    }
+
+}
+
+
+
+/* =========================================================
+   COLLECTION / PRODUCT CARDS
+========================================================= */
+
+.design-liquid-glass .products-grid {
+    align-items: stretch !important;
+}
+
+
+.design-liquid-glass .product-card {
+    display: flex !important;
+    flex-direction: column !important;
+
+    min-width: 0 !important;
+
+    overflow: hidden !important;
+}
+
+
+
+/* =========================================================
+   LARGE PRODUCT IMAGE AREA
+========================================================= */
+
+.design-liquid-glass .product-card-image {
+    height: 540px !important;
+
+    margin:
+        14px 14px 0
+        !important;
+
+    position: relative !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+}
+
+
+
+/* =========================================================
+   PRODUCTS 01 + 02
+========================================================= */
+
+.design-liquid-glass .product-card-image img,
+.design-liquid-glass .card-product-image {
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 auto !important;
+
+    padding: 0 !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    display: block !important;
+
+    transition:
+        transform 0.45s ease,
+        opacity 0.3s ease !important;
+}
+
+
+
+/* =========================================================
+   PRODUCT 03
+   Compensates for transparent padding in its PNG
+========================================================= */
+
+.design-liquid-glass
+.product-card:nth-child(3)
+.product-card-image img {
+
+    width: 112% !important;
+    height: 112% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: -6% auto !important;
+
+    object-fit: contain !important;
+}
+
+
+
+/* =========================================================
+   PRODUCT HOVER
+========================================================= */
+
+@media (hover: hover) {
+
+    .design-liquid-glass
+    .product-card:hover
+    .product-card-image img {
+
+        transform:
+            scale(1.035);
+    }
+
+
+    .design-liquid-glass
+    .product-card:nth-child(3):hover
+    .product-card-image img {
+
+        transform:
+            scale(1.045);
+    }
+
+}
+
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+   NAME + PRICE ALWAYS STAY INSIDE GLASS
+========================================================= */
+
+.design-liquid-glass .product-card-info {
+    width: 100% !important;
+
+    padding:
+        22px 22px 25px
+        !important;
+
+    display: flex !important;
+
+    align-items: flex-end !important;
+
+    justify-content:
+        space-between
+        !important;
+
+    gap: 14px !important;
+
+    min-width: 0 !important;
+}
+
+
+.design-liquid-glass
+.product-card-info > div {
+
+    min-width: 0 !important;
+
+    flex:
+        1 1 auto
+        !important;
+}
+
+
+.design-liquid-glass
+.product-card-info span {
+
+    display: block !important;
+
+    max-width: 100% !important;
+
+    overflow-wrap: anywhere !important;
+
+    font-size: 0.52rem !important;
+
+    letter-spacing: 1.4px !important;
+}
+
+
+.design-liquid-glass
+.product-card-info h3 {
+
+    margin-top: 8px !important;
+
+    max-width: 100% !important;
+
+    overflow-wrap: anywhere !important;
+
+    line-height: 1.25 !important;
+
+    font-size: 0.82rem !important;
+}
+
+
+.design-liquid-glass
+.product-card-info strong {
+
+    flex:
+        0 0 auto
+        !important;
+
+    white-space: nowrap !important;
+
+    padding-left: 8px !important;
+
+    font-size: 0.78rem !important;
+}
+
+
+
+/* =========================================================
+   TABLET PRODUCT CARDS
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .design-liquid-glass
+    .product-card-image {
+
+        height: 500px !important;
+    }
+
+
+    .design-liquid-glass
+    .product-card-image img {
+
+        width: 100% !important;
+        height: 100% !important;
+
+        margin:
+            0 auto
+            !important;
+    }
+
+
+    .design-liquid-glass
+    .product-card:nth-child(3)
+    .product-card-image img {
+
+        width: 112% !important;
+        height: 112% !important;
+
+        margin:
+            -6% auto
+            !important;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE PRODUCT CARDS
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .design-liquid-glass
+    .products-grid {
+
+        grid-template-columns:
+            1fr
+            !important;
+
+        gap: 28px !important;
+    }
+
+
+    .design-liquid-glass
+    .product-card {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin:
+            0 auto
+            !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* Large product display area */
+
+    .design-liquid-glass
+    .product-card-image {
+
+        height: 540px !important;
+
+        min-height: 540px !important;
+
+        width:
+            calc(100% - 24px)
+            !important;
+
+        margin:
+            12px 12px 0
+            !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
 
         justify-content: center !important;
+
+        overflow: hidden !important;
     }
+
+
+    /*
+       Products 01 + 02
+       Fill almost all available image space
+    */
+
+    .design-liquid-glass
+    .product-card-image img,
+    .design-liquid-glass
+    .card-product-image {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        max-width: none !important;
+
+        max-height: none !important;
+
+        margin:
+            0 auto
+            !important;
+
+        padding: 0 !important;
+
+        object-fit: contain !important;
+
+        object-position:
+            center center
+            !important;
+    }
+
+
+    /*
+       Product 03 has more transparent spacing
+       so we enlarge only the artwork.
+    */
+
+    .design-liquid-glass
+    .product-card:nth-child(3)
+    .product-card-image img {
+
+        width: 114% !important;
+
+        height: 114% !important;
+
+        max-width: none !important;
+
+        max-height: none !important;
+
+        margin:
+            -7% auto
+            !important;
+
+        object-fit: contain !important;
+    }
+
+
+    /* Keep product info fully inside glass */
+
+    .design-liquid-glass
+    .product-card-info {
+
+        width: 100% !important;
+
+        padding:
+            20px 18px 24px
+            !important;
+
+        display: flex !important;
+
+        align-items:
+            flex-end
+            !important;
+
+        justify-content:
+            space-between
+            !important;
+
+        gap: 12px !important;
+    }
+
+
+    .design-liquid-glass
+    .product-card-info > div {
+
+        min-width: 0 !important;
+
+        flex:
+            1 1 auto
+            !important;
+    }
+
+
+    .design-liquid-glass
+    .product-card-info span {
+
+        font-size:
+            0.48rem
+            !important;
+
+        letter-spacing:
+            1.25px
+            !important;
+
+        overflow-wrap:
+            anywhere
+            !important;
+    }
+
+
+    .design-liquid-glass
+    .product-card-info h3 {
+
+        font-size:
+            0.78rem
+            !important;
+
+        margin-top:
+            7px
+            !important;
+
+        line-height:
+            1.25
+            !important;
+
+        overflow-wrap:
+            anywhere
+            !important;
+    }
+
+
+    .design-liquid-glass
+    .product-card-info strong {
+
+        font-size:
+            0.76rem
+            !important;
+
+        flex-shrink:
+            0
+            !important;
+
+        white-space:
+            nowrap
+            !important;
+    }
+
+
+    /*
+       FRONT / BACK buttons stay
+       inside top-right corner
+    */
+
+    .design-liquid-glass
+    .card-views {
+
+        top: 14px !important;
+
+        right: 14px !important;
+
+        z-index: 30 !important;
+    }
+
+
+    /*
+       VIEW PRODUCT stays inside
+       bottom-left of image glass
+    */
+
+    .design-liquid-glass
+    .quick-view {
+
+        left: 16px !important;
+
+        bottom: 16px !important;
+
+        transform:
+            translateY(0)
+            !important;
+
+        z-index: 30 !important;
+    }
+
+}
+
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .design-liquid-glass
+    .hero-product-area {
+
+        height: 590px !important;
+
+        min-height: 590px !important;
+    }
+
+
+    .design-liquid-glass
+    .hero-product {
+
+        width: 98vw !important;
+
+        max-width: 500px !important;
+    }
+
+
+    .design-liquid-glass
+    .hero-product img,
+    .design-liquid-glass
+    #hero-image {
+
+        max-width: 500px !important;
+
+        max-height: 535px !important;
+    }
+
+
+    .design-liquid-glass
+    .product-card-image {
+
+        height: 515px !important;
+
+        min-height: 515px !important;
+    }
+
+
+    .design-liquid-glass
+    .product-card:nth-child(3)
+    .product-card-image img {
+
+        width: 116% !important;
+
+        height: 116% !important;
+
+        margin:
+            -8% auto
+            !important;
+    }
+
 }

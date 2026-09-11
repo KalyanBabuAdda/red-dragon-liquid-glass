@@ -4801,3 +4801,49 @@ main,
         margin: -8% auto !important;
     }
 }
+
+/* =========================================
+   FINAL FIX — REMOVE GLASS FROM NEXT DESIGN
+========================================= */
+
+body.design-liquid-glass .hero .secondary-button {
+    background: transparent !important;
+    background-image: none !important;
+
+    border: none !important;
+    outline: none !important;
+
+    border-radius: 0 !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    box-shadow: none !important;
+
+    padding: 4px 0 !important;
+
+    color: rgba(255,255,255,0.85) !important;
+}
+
+/* Remove any glass generated with pseudo-elements */
+body.design-liquid-glass .hero .secondary-button::before,
+body.design-liquid-glass .hero .secondary-button::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Hover effect */
+body.design-liquid-glass .hero .secondary-button:hover {
+    background: transparent !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: none !important;
+
+    color: var(--red) !important;
+
+    transform: translateX(4px);
+}
